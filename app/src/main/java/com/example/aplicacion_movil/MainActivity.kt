@@ -48,5 +48,5 @@ fun GreetingPreview() {
 
 @Composable
 fun test12(){
-    Text(text = "1 test de commit")
+    Text(text = "test de commit")
 }
