@@ -42,6 +42,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     Aplicacion_movilTheme {
-        Greeting("Android hola")
+        Greeting("Android hola1212312")
     }
+}
+
+@Composable
+fun test(){
+    Text(text = "test de commit")
 }
