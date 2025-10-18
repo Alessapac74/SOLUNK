@@ -47,6 +47,6 @@ fun GreetingPreview() {
 }
 
 @Composable
-fun test(){
+fun test12(){
     Text(text = "1 test de commit")
 }
