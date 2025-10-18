@@ -45,7 +45,3 @@ fun GreetingPreview() {
         Greeting("Android hola")
     }
 }
-@Composable
-fun test(){
-
-}
