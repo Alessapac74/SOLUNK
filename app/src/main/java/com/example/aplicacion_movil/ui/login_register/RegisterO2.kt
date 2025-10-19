@@ -51,7 +51,6 @@ fun RegisterS() {
 
             Spacer(modifier = Modifier.height(60.dp))
 
-            // Botón "Continuar con Google"
             Button(
                 onClick = { /* Acción para continuar con Google */ },
                 modifier = Modifier
@@ -68,7 +67,6 @@ fun RegisterS() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Botón "Continuar con mi email"
             Button(
                 onClick = { /* Acción para continuar con email */ },
                 modifier = Modifier
