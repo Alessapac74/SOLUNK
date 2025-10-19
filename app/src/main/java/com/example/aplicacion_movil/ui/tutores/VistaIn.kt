@@ -16,7 +16,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -35,7 +34,6 @@ import androidx.constraintlayout.compose.ConstraintLayout
 @Preview(showSystemUi = true)
 @Composable
 fun SearcScreen() {
-    val filtersChecked = remember { mutableStateOf(false) }
     val searchText = remember { mutableStateOf("¿Qué estas buscando?") }
 
     Box(

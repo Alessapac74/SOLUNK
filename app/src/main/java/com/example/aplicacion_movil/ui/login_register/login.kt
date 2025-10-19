@@ -48,7 +48,6 @@ fun LoginScreen() {
         ) {
             val (titleRef, emailRef, passwordRef, loginButtonRef, forgotPasswordRef, googleOptionRef) = createRefs()
 
-            // Título "Iniciar Sesión"
             Text(
                 text = "Iniciar Sesión",
                 fontSize = 28.sp,
@@ -62,7 +61,6 @@ fun LoginScreen() {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            // Campo Email
             Column(
                 modifier = Modifier.constrainAs(emailRef) {
                     top.linkTo(titleRef.bottom, margin = 40.dp)
@@ -84,7 +82,6 @@ fun LoginScreen() {
                 )
             }
 
-            // Campo Contraseña
             Column(
                 modifier = Modifier.constrainAs(passwordRef) {
                     top.linkTo(emailRef.bottom, margin = 20.dp)
@@ -106,7 +103,6 @@ fun LoginScreen() {
                 )
             }
 
-            // Botón Iniciar Sesión
             Button(
                 onClick = { /* Acción de login */ },
                 modifier = Modifier
@@ -120,7 +116,6 @@ fun LoginScreen() {
                 Text("Iniciar Sesión", fontSize = 16.sp)
             }
 
-            // ¿Olvidaste la contraseña?
             TextButton(
                 onClick = { /* Acción para recuperar contraseña */ },
                 modifier = Modifier.constrainAs(forgotPasswordRef) {
@@ -132,7 +127,6 @@ fun LoginScreen() {
                 Text("¿Olvidaste la contraseña?")
             }
 
-            // Opción Continuar con Google
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.constrainAs(googleOptionRef) {

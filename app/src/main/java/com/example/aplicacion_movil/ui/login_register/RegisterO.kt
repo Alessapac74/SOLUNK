@@ -28,7 +28,6 @@ import com.example.aplicacion_movil.R
 @Preview(showBackground = true)
 @Composable
 fun TutoriaPortalScreen() {
-    // Estados usando remember
     val rememberState = remember { "Estado recordado" }
 
     Box(
@@ -43,7 +42,6 @@ fun TutoriaPortalScreen() {
         ) {
             val (titleRef, subtitleRef, buttonsRef) = createRefs()
 
-            // Título principal - "Registro gratuito"
             Text(
                 text = "Registro gratuito",
                 fontSize = 24.sp,
@@ -55,7 +53,6 @@ fun TutoriaPortalScreen() {
                 }
             )
 
-            // Subtítulo - "Unite gratis al portal de tutoria"
             Text(
                 text = "Unite gratis al portal de\ntutoria",
                 fontSize = 18.sp,
@@ -67,7 +64,6 @@ fun TutoriaPortalScreen() {
                 }
             )
 
-            // Botones en
             Column(
                 modifier = Modifier.constrainAs(buttonsRef) {
                     top.linkTo(subtitleRef.bottom, margin = 48.dp)

@@ -26,10 +26,8 @@ import com.example.aplicacion_movil.R
 @Composable
 fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
 
-    // Estado del rol seleccionado
     var rolSeleccionado by rememberSaveable { mutableStateOf("") }
 
-    // Texto dinámico según la selección
     val textoFrecuente = when (rolSeleccionado) {
         "Alumno" -> "Preguntas Frecuentes que hagan los usuarios de alumnos"
         "Profesor" -> "Preguntas Frecuentes que hagan los usuarios de profesores"
@@ -37,7 +35,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
         else -> "Selecciona una opción para ver las preguntas frecuentes"
     }
 
-    // Fondo principal
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -50,7 +47,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
                 .background(Color.White, RoundedCornerShape(8.dp))
                 .padding(8.dp)
         ) {
-            // 🔹 Título
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -68,7 +64,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 🔹 Texto principal
             Text(
                 text = "¿En qué podemos ayudarte?",
                 fontWeight = FontWeight.Bold,
@@ -82,7 +77,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 🔹 Fila 1: Alumno y Profesor
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
@@ -110,7 +104,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // 🔹 Fila 2: Academia
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Start
@@ -127,7 +120,6 @@ fun PantallaAyuda(onCloseClick: () -> Unit = {}) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 🔹 Cuadro dinámico
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -156,7 +148,6 @@ fun OpcionAyuda(
     icono: Int,
     modifier: Modifier = Modifier
 ) {
-    // Cambiar color dependiendo del estado
     val colorFondo = if (seleccionado) colorSeleccion else Color(0xFFDADADA)
 
     Column(

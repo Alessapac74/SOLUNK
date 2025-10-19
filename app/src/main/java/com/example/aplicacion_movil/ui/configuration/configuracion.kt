@@ -52,7 +52,6 @@ fun SettingsScreen() {
                 modifier = Modifier.padding(bottom = 16.dp)
             )
 
-            // Campos de texto
             listOf(
                 "Contraseña Actual" to currentPassword,
                 "Nueva contraseña" to newPassword,

@@ -39,7 +39,6 @@ fun RegisterScreen() {
             ) {
                 val (titleRef, subtitleRef, benefitsRef, formRef, termsRef, buttonRef, loginRef) = createRefs()
 
-                // Título
                 Text(
                     text = "Registro gratuito",
                     fontSize = 28.sp,
@@ -156,11 +155,9 @@ fun RegisterScreen() {
                     )
                 }
 
-                // Botón de registro
                 Button(
                     onClick = {
                         isLoading = true
-                        // Lógica de registro aquí
                     },
                     modifier = Modifier
                         .constrainAs(buttonRef) {
