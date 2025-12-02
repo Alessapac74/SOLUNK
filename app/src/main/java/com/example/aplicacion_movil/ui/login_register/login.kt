@@ -1,5 +1,6 @@
 package com.example.aplicacion_movil.ui.login_register
 
+import android.R.attr.shape
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
@@ -28,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.aplicacion_movil.ui.theme.shapes
 
 @Preview(showBackground = true)
 @Composable
@@ -50,12 +53,14 @@ fun LoginScreen() {
 
             Text(
                 text = "Iniciar Sesión",
+                style = MaterialTheme.typography.bodyLarge,
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.constrainAs(titleRef) {
                     top.linkTo(parent.top, margin = 80.dp)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
+
                 }
             )
 
@@ -78,7 +83,8 @@ fun LoginScreen() {
                     value = email,
                     onValueChange = { email = it },
                     modifier = Modifier.fillMaxWidth(),
-                    placeholder = { Text("Ingresa tu email") }
+                    placeholder = { Text("Ingresa tu email") },
+                    shape = MaterialTheme.shapes.medium
                 )
             }
 
@@ -99,7 +105,8 @@ fun LoginScreen() {
                     value = password,
                     onValueChange = { password = it },
                     modifier = Modifier.fillMaxWidth(),
-                    placeholder = { Text("Ingresa tu contraseña") }
+                    placeholder = { Text("Ingresa tu contraseña") },
+                    shape = MaterialTheme.shapes.medium
                 )
             }
 
@@ -111,9 +118,11 @@ fun LoginScreen() {
                         top.linkTo(passwordRef.bottom, margin = 30.dp)
                         start.linkTo(parent.start)
                         end.linkTo(parent.end)
-                    }
+                    },
+                shape = MaterialTheme.shapes.medium
             ) {
-                Text("Iniciar Sesión", fontSize = 16.sp)
+                Text("Iniciar Sesión",
+                    style = MaterialTheme.typography.labelLarge, fontSize = 16.sp)
             }
 
             TextButton(
@@ -124,7 +133,8 @@ fun LoginScreen() {
                     end.linkTo(parent.end)
                 }
             ) {
-                Text("¿Olvidaste la contraseña?")
+                Text("¿Olvidaste la contraseña?",
+                    style = MaterialTheme.typography.bodyMedium)
             }
 
             Row(
@@ -137,7 +147,8 @@ fun LoginScreen() {
             ) {
                 Button(onClick = { /* Acción de login */ },
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Red)
+                        containerColor = Color.Red),
+                    shape = MaterialTheme.shapes.medium
                         ) {
                     Checkbox(
                     checked = rememberMe,
